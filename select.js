@@ -11,6 +11,12 @@
   	};
 
   	options = $.extend(true, options, customOptions);
+	  
+	  // Проверяем инициализирован уже селект или нет, на случай подгрузки Ajax`ом
+
+	  if(this.parent('.select-style').length){
+	  	return; // Если селект уже инициализирован, то просто завершаем работу
+	  }
   
     var select = this; //Создаем переменную с селектом
 
